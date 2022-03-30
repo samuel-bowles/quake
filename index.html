@@ -5,16 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quake</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!-- Fonts -->
     <!-- <link href="http://fonts.cdnfonts.com/css/quake-dpquake" rel="stylesheet"> -->
+
+    <!-- JavaScript -->
+    <script src="assets/js/mainMenu.js"></script>
+    <script src="assets/js/singlePlayer.js"></script>
                 
 </head>
 <body>
     <div class="wrapper quake-font">
-        <h1>Quake Time</h1>
-        <p>There's a quake in my pants.</p>
+        <div class="overlay-ui">
+            <h1>QUAKE</h1>
+            <p>id</p>
+            <div class="menu-screen">
+
+            </div>
+            <p><button id="back-button">B Back</button><button id="select-button">A Select</button></p>
+        </div>
     </div>
+
+    <script>
+        document.querySelector('#back-button').onclick = (e => {
+            window.location.hash = "main-menu";
+        })
+
+        function addOnClickHashChange(menuEl) {
+            let itemList = menuEl.querySelectorAll('.menu-item')
+            itemList.forEach((item) => {
+                item.onclick = (ev => {
+                  window.location.hash = item.id;
+                })
+            })
+        }
+
+        function checkHash() {
+            let menuScreen = document.querySelector('.menu-screen');
+            menuScreen.innerHTML= "";
+
+            if (window.location.hash == "") {
+                window.location.hash = "main-menu";
+            }
+
+            let menuLocation = window.location.hash.slice(1);
+            let menu;
+            switch(menuLocation) {
+                case "main-menu":
+                    menu = new MainMenu().render();
+                    break
+                case "single-player":
+                    menu = new SinglePlayer().render();
+                    break
+                default:
+                    return null;
+            }
+            menuScreen.append(menu);
+        }
+
+        window.addEventListener("hashchange", checkHash);
+
+        checkHash();
+    </script>
 </body>
 </html>
