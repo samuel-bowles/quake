@@ -7,9 +7,9 @@ class SinglePlayer {
         menuEl.innerHTML = `
             <h2>Single</h2>
             <ul>
-                <li>New Game</li>
-                <li>Level Select</li>
-                <li>Load Game</li>
+                <li class="menu-item" id="new-game">New Game</li>
+                <li class="menu-item" id="level-select">Level Select</li>
+                <li class="menu-item" id="load-game">Load Game</li>
             </ul>
         `
 
