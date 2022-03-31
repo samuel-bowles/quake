@@ -17,6 +17,7 @@
     <script src="assets/js/mainMenu.js"></script>
     <script src="assets/js/singlePlayer.js"></script>
     <script src="assets/js/newGame.js"></script>
+    <script src="assets/js/levelSelect.js"></script>
                 
 </head>
 <body>
@@ -64,6 +65,9 @@
                     break
                 case "new-game":
                     menu = new NewGame().render();
+                    break
+                case "level-select":
+                    menu = new LevelSelect().render();
                     break
                 default:
                     return null;
