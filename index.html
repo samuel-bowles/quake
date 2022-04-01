@@ -24,6 +24,7 @@
     <script src="assets/js/changeSettingsCooperative.js"></script>
     <script src="assets/js/changeSettingsDeathmatch.js"></script>
     <script src="assets/js/changeSettingsHorde.js"></script>
+    <script src="assets/js/options.js"></script>
     <script src="assets/js/objects.js"></script>
                 
 </head>
@@ -103,6 +104,9 @@
                     break
                 case "horde":
                     menu = new ChangeSettingsHorde().render();
+                    break
+                case "options":
+                    menu = new Options().render();
                     break
                 default:
                     return null;
