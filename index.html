@@ -23,6 +23,7 @@
     <script src="assets/js/localPLay.js"></script>
     <script src="assets/js/changeSettingsCooperative.js"></script>
     <script src="assets/js/changeSettingsDeathmatch.js"></script>
+    <script src="assets/js/changeSettingsHorde.js"></script>
     <script src="assets/js/objects.js"></script>
                 
 </head>
@@ -99,6 +100,9 @@
                     break
                 case "deathmatch":
                     menu = new ChangeSettingsDeathmatch().render();
+                    break
+                case "horde":
+                    menu = new ChangeSettingsHorde().render();
                     break
                 default:
                     return null;
