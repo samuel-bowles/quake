@@ -6,7 +6,6 @@ html {
 
 body{
     width: 100%;
-    height: 100vh;
 }
 
 img {
@@ -25,17 +24,16 @@ img {
     width: 100%;
     height: 100vh;
     text-align: center;
-    padding-top: 40px;
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 4rem;
 }
 
-p {
+p, td, tr {
     font-size: 2rem;
 }

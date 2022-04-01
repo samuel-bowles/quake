@@ -18,6 +18,12 @@
     <script src="assets/js/singlePlayer.js"></script>
     <script src="assets/js/newGame.js"></script>
     <script src="assets/js/levelSelect.js"></script>
+    <script src="assets/js/loadGame.js"></script>
+    <script src="assets/js/multiplayer.js"></script>
+    <script src="assets/js/localPLay.js"></script>
+    <script src="assets/js/changeSettingsCooperative.js"></script>
+    <script src="assets/js/changeSettingsDeathmatch.js"></script>
+    <script src="assets/js/objects.js"></script>
                 
 </head>
 <body>
@@ -37,14 +43,24 @@
             window.location.hash = "main-menu";
         })
 
+        // Changes the window.location.hash when a menu item is clicked
         function addOnClickHashChange(menuEl) {
             let itemList = menuEl.querySelectorAll('.menu-item')
             itemList.forEach((item) => {
                 item.onclick = (ev => {
                   window.location.hash = item.id;
+                  console.log(window.location.hash)
                 })
             })
         }
+
+        // Changes the window.location.hash when a menu dropdown changes
+        function addDropDownHashChange(menuEl) {
+            let modeSelect = menuEl.querySelector('#game-mode');
+            window.location.hash = modeSelect.value.toLowerCase();
+            console.log(window.location.hash)
+        }
+
 
         function checkHash() {
             let menuScreen = document.querySelector('.menu-screen');
@@ -68,6 +84,21 @@
                     break
                 case "level-select":
                     menu = new LevelSelect().render();
+                    break
+                case "load-game":
+                    menu = new LoadGame().render();
+                    break
+                case "multiplayer":
+                    menu = new Multiplayer().render();
+                    break
+                case "local-play":
+                    menu = new LocalPlay().render();
+                    break
+                case "cooperative":
+                    menu = new ChangeSettingsCooperative().render();
+                    break
+                case "deathmatch":
+                    menu = new ChangeSettingsDeathmatch().render();
                     break
                 default:
                     return null;
