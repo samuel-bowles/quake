@@ -14,6 +14,7 @@
     <!-- <link href="http://fonts.cdnfonts.com/css/quake-dpquake" rel="stylesheet"> -->
 
     <!-- JavaScript -->
+    <script src="assets/js/objects.js"></script>
     <script src="assets/js/mainMenu.js"></script>
     <script src="assets/js/singlePlayer.js"></script>
     <script src="assets/js/newGame.js"></script>
@@ -25,7 +26,7 @@
     <script src="assets/js/changeSettingsDeathmatch.js"></script>
     <script src="assets/js/changeSettingsHorde.js"></script>
     <script src="assets/js/options.js"></script>
-    <script src="assets/js/objects.js"></script>
+    <script src="assets/js/optionsInput.js"></script>
                 
 </head>
 <body>
@@ -41,17 +42,12 @@
     </div>
 
     <script>
-        document.querySelector('#back-button').onclick = (e => {
-            window.location.hash = "main-menu";
-        })
-
         // Changes the window.location.hash when a menu item is clicked
         function addOnClickHashChange(menuEl) {
             let itemList = menuEl.querySelectorAll('.menu-item')
             itemList.forEach((item) => {
                 item.onclick = (ev => {
                   window.location.hash = item.id;
-                  console.log(window.location.hash)
                 })
             })
         }
@@ -60,17 +56,19 @@
         function addDropDownHashChange(menuEl) {
             let modeSelect = menuEl.querySelector('#game-mode');
             window.location.hash = modeSelect.value.toLowerCase();
-            console.log(window.location.hash)
         }
 
+        document.querySelector('#back-button').onclick = (e => {
+            if (window.location.hash === "#main-menu") {
+                return false
+            } else {
+                history.back();
+            }
+        })
 
         function checkHash() {
             let menuScreen = document.querySelector('.menu-screen');
             menuScreen.innerHTML= "";
-
-            if (window.location.hash == "") {
-                window.location.hash = "main-menu";
-            }
 
             let menuLocation = window.location.hash.slice(1);
             let menu;
@@ -108,15 +106,23 @@
                 case "options":
                     menu = new Options().render();
                     break
+                case "options-input":
+                    menu = new OptionsInput().render();
+                    break
                 default:
                     return null;
             }
+
             menuScreen.append(menu);
         }
 
         window.addEventListener("hashchange", checkHash);
 
-        checkHash();
+        // Set initial hash so that main menu loads
+        if (window.location.hash == "") {
+                window.location.hash = "main-menu";
+            }
+
     </script>
 </body>
 </html>
