@@ -27,6 +27,12 @@
     <script src="assets/js/changeSettingsHorde.js"></script>
     <script src="assets/js/options.js"></script>
     <script src="assets/js/optionsInput.js"></script>
+    <script src="assets/js/optionsGameplay.js"></script>
+    <script src="assets/js/optionsMultiplayer.js"></script>
+    <script src="assets/js/optionsSound.js"></script>
+    <script src="assets/js/optionsDisplay.js"></script>
+    <script src="assets/js/optionsLanguage.js"></script>
+    <script src="assets/js/optionsCredits.js"></script>
                 
 </head>
 <body>
@@ -108,6 +114,24 @@
                     break
                 case "options-input":
                     menu = new OptionsInput().render();
+                    break
+                case "options-gameplay":
+                    menu = new OptionsGameplay().render();
+                    break
+                case "options-multiplayer":
+                    menu = new OptionsMultiplayer().render();
+                    break
+                case "options-sound":
+                    menu = new OptionsSound().render();
+                    break
+                case "options-display":
+                    menu = new OptionsDisplay().render();
+                    break
+                case "options-language":
+                    menu = new OptionsLanguage().render();
+                    break
+                case "options-credits":
+                    menu = new OptionsCredits().render();
                     break
                 default:
                     return null;

@@ -1,6 +1,6 @@
 class OptionsInput {
 
-    // Render Options Menu
+    // Render Options Input Menu
     render() {
         let menuEl = document.createElement('div');
 
