@@ -37,13 +37,19 @@
 </head>
 <body>
     <div class="wrapper quake-font">
-        <div class="overlay-ui">
-            <h1>QUAKE</h1>
-            <p>id</p>
-            <div class="menu-screen">
-
+        <div class="container-box">
+            <div class="main-content">
+                <div class="logo-container">
+                    <h1 class="game-title">QUAKE</h1>
+                    <p>id</p>
+                </div>
+                <div class="menu-screen">
+                    <!-- Menu inserted by JS here -->
+                </div>
             </div>
-            <p><button id="back-button">B Back</button><button id="select-button">A Select</button></p>
+            <div class="nav">
+                <p><button id="back-button">B Back</button><button id="select-button">A Select</button></p>
+            </div>
         </div>
     </div>
 
@@ -141,6 +147,8 @@
         }
 
         window.addEventListener("hashchange", checkHash);
+        
+        checkHash();
 
         // Set initial hash so that main menu loads
         if (window.location.hash == "") {
@@ -149,4 +157,5 @@
 
     </script>
 </body>
+<script src="assets/js/debugcss.js"></script>
 </html>

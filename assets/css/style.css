@@ -19,11 +19,13 @@ img {
 
 .wrapper {
     font-family: quake;
-    color: brown;
-    background-color: grey;
-    width: 100%;
+    background-color: aqua;
+    width: 100vw;
     height: 100vh;
-    text-align: center;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 h1 {
@@ -35,5 +37,30 @@ h2 {
 }
 
 p, td, tr {
-    font-size: 2rem;
+    font-size: 1rem;
 }
+
+.container-box {
+    width: 80%;
+}
+
+.main-content {
+    display: flex;
+}
+
+.logo-container {
+    width: 5rem;
+    text-align: center;
+}
+
+.menu-screen {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.game-title {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+}
+
+
