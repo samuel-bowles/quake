@@ -138,3 +138,23 @@ p, td, tr {
     height: 92px;
     background: url(../sprites/PC_Computer_Quake_Menu_Assets_resize.png) -129px -290px;
 }
+
+.menu-item {
+    position: relative;
+}
+
+.menu-item:hover:before {
+    content: '';
+    top: -16px;
+    left: 0px;
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    background: url(../sprites/quake_cursor.png) 0px 0px;
+    animation: quake-cursor 1s steps(6) infinite;
+
+}
+
+@keyframes quake-cursor {
+    100% { background-position: -384px 0; }
+  }
