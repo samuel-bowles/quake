@@ -17,6 +17,11 @@ img {
     src: url(../quake-dpquake/dpquake_.ttf);
 }
 
+:root {
+    --quake-brown: #9c4c25;
+    --dark-brown: #1f1d17;
+}
+
 .wrapper {
     font-family: quake;
     background-color: aqua;
@@ -49,8 +54,42 @@ p, td, tr {
 }
 
 .logo-container {
-    width: 5rem;
+    min-width: 5rem;
+    background-color: var(--quake-brown);
+}
+
+.game-title {
+    text-orientation: upright;
     text-align: center;
+    padding-top: 1rem;
+    color: var(--dark-brown);
+    writing-mode: vertical-lr;
+    display: block;
+    position: relative;
+}
+
+.game-title:before,
+.game-title:after {
+    content: attr(title);
+    position: absolute;
+    color: rgba(50, 50, 50, 0.4);
+
+}
+
+.game-title::before {
+    top: 1.04rem;
+    left: 0.05rem;
+  }
+
+.game-title::after {
+    top: 1.08rem;
+    left: 0.05rem;
+}
+
+#logo {
+    width: 122px;
+    height: 554px;
+    background: url(../sprites/PC_Computer_Quake_Menu_Assets_resize.png) -3px -2px;
 }
 
 .menu-screen {
@@ -58,9 +97,44 @@ p, td, tr {
     flex-grow: 1;
 }
 
-.game-title {
-    writing-mode: vertical-lr;
-    text-orientation: upright;
+.buttons {
+    display: flex;
+    background: pink;
+}
+
+.buttons button:nth-child(2) {
+    margin-left: auto;
 }
 
 
+/* Menu Headings Sprites*/
+
+.main-menu-heading {
+    width: 369px;
+    height: 92px;
+    background: url(../sprites/PC_Computer_Quake_Menu_Assets_resize.png) -129px -2px;
+}
+
+.single-heading {
+    width: 494px;
+    height: 92px;
+    background: url(../sprites/PC_Computer_Quake_Menu_Assets_resize.png) -962px -2px;
+}
+
+.load-heading {
+    width: 400px;
+    height: 92px;
+    background: url(../sprites/PC_Computer_Quake_Menu_Assets_resize.png) -129px -194px;
+}
+
+.multiplayer-heading {
+    width: 831px;
+    height: 92px;
+    background: url(../sprites/PC_Computer_Quake_Menu_Assets_resize.png) -962px -98px;
+}
+
+.options-heading {
+    width: 555px;
+    height: 92px;
+    background: url(../sprites/PC_Computer_Quake_Menu_Assets_resize.png) -129px -290px;
+}

@@ -11,7 +11,7 @@ class LevelSelect {
         }
         
         menuEl.innerHTML = `
-            <h2>Single</h2>
+            <h1><img class="single-heading heading" src="assets/sprites/trans.png" alt="level-select-menu"></h1>
             
             <p>Level Select</p>
             <form action="#" method="post">

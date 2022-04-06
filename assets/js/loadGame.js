@@ -5,7 +5,8 @@ class LoadGame {
         let menuEl = document.createElement('div');
 
         menuEl.innerHTML = `
-            <h2>Load</h2>
+            <h1><img class="load-heading heading" src="assets/sprites/trans.png" alt="load-menu"></h1>
+
             <ul>
                 <li class="menu-item" class="quick-load">Udob</li>
                 <li class="menu-item" class="quick-load"><p>Last Waltz</p><p>Kills: 38/106</p> </li>

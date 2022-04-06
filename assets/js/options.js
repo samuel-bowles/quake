@@ -5,7 +5,7 @@ class Options {
         let menuEl = document.createElement('div');
 
         menuEl.innerHTML = `
-            <h2>Options</h2>
+            <h1><img class="options-heading heading" src="assets/sprites/trans.png" alt="options-menu"></h1>
 
             <ul>
                 <li class="menu-item" id="options-input">Input</li>

@@ -5,7 +5,7 @@ class NewGame {
         let menuEl = document.createElement('div');
 
         menuEl.innerHTML = `
-            <h2>Single</h2>
+            <h1><img class="single-heading heading" src="assets/sprites/trans.png" alt="new-game-menu"></h1>
             <ul>
                 <li>Quake</li>
                 <li>Scourge of Armagon</li>

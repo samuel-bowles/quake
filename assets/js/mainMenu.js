@@ -5,7 +5,7 @@ class MainMenu {
         let menuEl = document.createElement('div');
 
         menuEl.innerHTML = `
-            <h2>Main</h2>
+            <h1><img class="main-menu-heading heading" src="assets/sprites/trans.png" alt="main-menu"></h1>
             <ul>
                 <li class="menu-item" id="single-player">Single Player</li>
                 <li class="menu-item" id="multiplayer">Multiplayer</li>

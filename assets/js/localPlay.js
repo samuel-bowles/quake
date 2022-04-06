@@ -5,7 +5,8 @@ class LocalPlay {
         let menuEl = document.createElement('div');
 
         menuEl.innerHTML = `
-            <h2>Multiplayer</h2>
+            <h1><img class="multiplayer-heading heading" src="assets/sprites/trans.png" alt="local-play-menu"></h1>
+
             <table>
                 <tr>
                     <th>Next Match</th>

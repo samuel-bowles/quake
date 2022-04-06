@@ -12,7 +12,7 @@ class ChangeSettingsCooperative {
 
         // Cooperative Menu Screen
         menuEl.innerHTML = `
-            <h2>Multiplayer</h2>
+            <h1><img class="multiplayer-heading heading" src="assets/sprites/trans.png" alt="multiplayer-coop-menu"></h1>
 
             <table>
                 <tr>
