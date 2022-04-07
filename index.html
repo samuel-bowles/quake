@@ -41,6 +41,7 @@
 <body>
     <div class="wrapper quake-font">
         <div class="container-box">
+            <button class="audio-toggle">Audio</button>
             <div class="main-content">
                 <div class="logo-container">
                     <p><img id="logo" src="assets/sprites/trans.png" alt="quake-logo"></p>
@@ -50,7 +51,8 @@
                 </div>
             </div>
             <div class="buttons">
-                <button id="back-button">B Back</button><button id="select-button">A Select</button>
+                <button id="back-button" class="ui-button">B Back</button>
+                <button id="select-button" class="ui-button">A Select</button>
             </div>
         </div>
     </div>
@@ -73,12 +75,23 @@
         }
 
         document.querySelector('#back-button').onclick = (e => {
+            playButton();
             if (window.location.hash === "#main-menu") {
                 return false
             } else {
                 history.back();
             }
         })
+
+        document.querySelector('#select-button').onclick = (e => {
+            playButton();
+            history.forward();
+        })
+
+        // Add Event Listener for audio toggle
+        const audioToggle = document.querySelector('.audio-toggle');
+        audioToggle.addEventListener('click', toggleAudio);
+        
 
         function checkHash() {
             let menuScreen = document.querySelector('.menu-screen');
