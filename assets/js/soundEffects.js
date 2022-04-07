@@ -16,6 +16,11 @@ function toggleAudio() {
 
         // Set Video Mute and Volume
         let bgVid = document.querySelector('.quake-video-bg');
+        
+        // If video doesn't autoplay this will start playback
+        if (bgVid.paused === true) {
+            bgVid.play();
+        }
         bgVid.volume = 0.2;
         bgVid.muted === true ? bgVid.muted = false : bgVid.muted = true;
 }
