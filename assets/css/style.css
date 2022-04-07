@@ -134,9 +134,9 @@ p, td, tr {
 }
 
 .options-heading {
-    width: 555px;
-    height: 92px;
-    background: url(../sprites/PC_Computer_Quake_Menu_Assets_resize.png) -129px -290px;
+    width: 550px;
+    height: 90px;
+    background: url(../sprites/PC_Computer_Quake_Menu_Assets_resize.png) -131px -292px;
 }
 
 .menu-item {
@@ -158,3 +158,13 @@ p, td, tr {
 @keyframes quake-cursor {
     100% { background-position: -384px 0; }
   }
+
+.quake-video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}

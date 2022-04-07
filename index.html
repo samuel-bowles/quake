@@ -40,6 +40,9 @@
 </head>
 <body>
     <div class="wrapper quake-font">
+        <video class="quake-video-bg" autoplay muted loop playsinline>
+            <source src="assets/video/Quake-1.mp4" type="video/mp4">
+        </video>
         <div class="container-box">
             <button class="audio-toggle">Audio</button>
             <div class="main-content">
@@ -75,7 +78,6 @@
         }
 
         document.querySelector('#back-button').onclick = (e => {
-            playButton();
             if (window.location.hash === "#main-menu") {
                 return false
             } else {
@@ -84,14 +86,12 @@
         })
 
         document.querySelector('#select-button').onclick = (e => {
-            playButton();
             history.forward();
         })
 
         // Add Event Listener for audio toggle
         const audioToggle = document.querySelector('.audio-toggle');
         audioToggle.addEventListener('click', toggleAudio);
-        sessionStorage.setItem('mute', true);
         
 
         function checkHash() {
@@ -165,6 +165,7 @@
 
         window.addEventListener("hashchange", checkHash);
         
+        buttonListener();
         checkHash();
 
         // Set initial hash so that main menu loads

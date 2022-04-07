@@ -8,9 +8,16 @@ menuHoverSound.volume = 0.2;
 let menuButtonSound = new Audio("assets/audio/menu2.wav");
 menuButtonSound.volume = 0.2;
 
+
+
 // Toggles Audio On and Off
 function toggleAudio() {
         mute === "true" ? mute = "false" : mute = "true";
+
+        // Set Video Mute and Volume
+        let bgVid = document.querySelector('.quake-video-bg');
+        bgVid.volume = 0.2;
+        bgVid.muted === true ? bgVid.muted = false : bgVid.muted = true;
 }
 
 // Play menu audio effect
@@ -27,5 +34,12 @@ function hoverListener() {
     menuItem.forEach(item => {
         item.addEventListener("mouseover", playMenu)
         item.addEventListener("click", playButton)
+    })
+}
+
+function buttonListener(){
+    const buttons = document.querySelectorAll('.buttons');
+    buttons.forEach(button => {
+        button.addEventListener("click", playButton)
     })
 }
