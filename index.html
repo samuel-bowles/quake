@@ -91,6 +91,7 @@
         // Add Event Listener for audio toggle
         const audioToggle = document.querySelector('.audio-toggle');
         audioToggle.addEventListener('click', toggleAudio);
+        sessionStorage.setItem('mute', true);
         
 
         function checkHash() {

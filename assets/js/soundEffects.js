@@ -1,33 +1,31 @@
 // Add Audio Effects
 
-// Menu Hover
-const menuHoverSound = new Audio("assets/audio/menu1.wav");
-menuHoverSound.volume = 0.2;
-menuHoverSound.muted = true;
-// Menu Button Click
-const menuButtonSound = new Audio("assets/audio/menu2.wav");
-menuButtonSound.volume = 0.2;
-menuButtonSound.muted = true
+sessionStorage.setItem('mute', true);
+let mute = sessionStorage.getItem('mute');
 
+let menuHoverSound = new Audio("assets/audio/menu1.wav");
+menuHoverSound.volume = 0.2;
+let menuButtonSound = new Audio("assets/audio/menu2.wav");
+menuButtonSound.volume = 0.2;
 
 // Toggles Audio On and Off
 function toggleAudio() {
-        menuHoverSound.muted ? menuHoverSound.muted = false : menuHoverSound.muted = true;
-        menuButtonSound.muted ? menuButtonSound.muted = false : menuButtonSound.muted = true;
+        mute === "true" ? mute = "false" : mute = "true";
 }
 
 // Play menu audio effect
 function playMenu() {
-    menuHoverSound.play();
+    mute === "false" ? menuHoverSound.play() : false;
 }
 
 function playButton() {
-    menuButtonSound.play();
+    mute === "false" ? menuButtonSound.play() : false;
 }
 
 function hoverListener() {
     const menuItem = document.querySelectorAll('.menu-item');
     menuItem.forEach(item => {
         item.addEventListener("mouseover", playMenu)
+        item.addEventListener("click", playButton)
     })
 }
