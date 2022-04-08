@@ -24,7 +24,6 @@ img {
 
 .wrapper {
     font-family: quake;
-    background-color: aqua;
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -35,6 +34,7 @@ img {
 
 h1 {
     font-size: 5rem;
+    margin-bottom: 2rem;
 }
 
 h2 {
@@ -43,6 +43,26 @@ h2 {
 
 p, td, tr {
     font-size: 1rem;
+}
+
+.controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    line-height: 1.5rem;
+    border-radius: 3px;
+}
+
+.controls p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.controls button {
+    display: inline-block;
+    background: pink;
 }
 
 .container-box {
@@ -55,7 +75,6 @@ p, td, tr {
 
 .logo-container {
     min-width: 5rem;
-    background-color: var(--quake-brown);
 }
 
 .game-title {
@@ -73,7 +92,6 @@ p, td, tr {
     content: attr(title);
     position: absolute;
     color: rgba(50, 50, 50, 0.4);
-
 }
 
 .game-title::before {
@@ -87,9 +105,9 @@ p, td, tr {
 }
 
 #logo {
-    width: 122px;
-    height: 554px;
-    background: url(../sprites/PC_Computer_Quake_Menu_Assets_resize.png) -3px -2px;
+    width: 120px;
+    height: 550px;
+    background: url(../sprites/PC_Computer_Quake_Menu_Assets_resize.png) -4px -4px;
 }
 
 .menu-screen {
@@ -97,61 +115,99 @@ p, td, tr {
     flex-grow: 1;
 }
 
-.buttons {
+.back-select-container {
     display: flex;
-    background: pink;
 }
 
-.buttons button:nth-child(2) {
+.back-select-container button:nth-child(2) {
     margin-left: auto;
 }
 
+.ui-button {
+    background: none;
+    border: none;
+    margin-top: 20px;
+    color:rgba(231, 231, 229, 0.5);
+    font-size: 1.2rem;
+    font-family: quake;
+    font-weight: bold;
+}
+
+.ui-button span {
+    display: inline-flex;
+    line-height: 1;
+    background: rgba(26, 21, 21, 0.4);
+    color: white;
+    width: 1.8rem;
+    height: 1.8rem;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(231, 231, 229, 0.5);
+    border-radius: 50%;
+    
+}
 
 /* Menu Headings Sprites*/
 
 .main-menu-heading {
-    width: 369px;
-    height: 92px;
-    background: url(../sprites/PC_Computer_Quake_Menu_Assets_resize.png) -129px -2px;
+    width: 366px;
+    height: 89px;
+    background: url(../sprites/PC_Computer_Quake_Menu_Assets_resize.png) -131px -4px;
 }
 
 .single-heading {
-    width: 494px;
-    height: 92px;
-    background: url(../sprites/PC_Computer_Quake_Menu_Assets_resize.png) -962px -2px;
+    width: 489px;
+    height: 89px;
+    background: url(../sprites/PC_Computer_Quake_Menu_Assets_resize.png) -965px -4px;
 }
 
 .load-heading {
-    width: 400px;
-    height: 92px;
-    background: url(../sprites/PC_Computer_Quake_Menu_Assets_resize.png) -129px -194px;
+    width: 397px;
+    height: 89px;
+    background: url(../sprites/PC_Computer_Quake_Menu_Assets_resize.png) -131px -196px;
 }
 
 .multiplayer-heading {
-    width: 831px;
-    height: 92px;
-    background: url(../sprites/PC_Computer_Quake_Menu_Assets_resize.png) -962px -98px;
+    width: 827px;
+    height: 89px;
+    background: url(../sprites/PC_Computer_Quake_Menu_Assets_resize.png) -965px -100px;
 }
 
 .options-heading {
     width: 550px;
-    height: 90px;
+    height: 89px;
     background: url(../sprites/PC_Computer_Quake_Menu_Assets_resize.png) -131px -292px;
 }
 
 .menu-item {
     position: relative;
+    margin-bottom: 1rem;
+    margin-left: 48px;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 48px;
+    color: var(--quake-brown);
+    text-shadow: -1px -1px 1px rgba(231, 231, 229, 0.5), 1px 1px 2px black;
+
+    /* background-image: url(../sprites/brown-dirt-minecraft-pattern_thumb.jpg);
+    background-size: 7%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text; */
 }
+
 
 .menu-item:hover:before {
     content: '';
-    top: -16px;
-    left: 0px;
-    width: 64px;
-    height: 64px;
+    top: 16px;
+    left: 8px;
+    width: 16px;
+    height: 16px;
     position: absolute;
-    background: url(../sprites/quake_cursor.png) 0px 0px;
+    background: url(../sprites/Quake_Cursor_raw.png) 0px 0px;
     animation: quake-cursor 1s steps(6) infinite;
+    transform: scale(3);
 
 }
 
@@ -166,5 +222,21 @@ p, td, tr {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
+    z-index: -2;
+}
+
+.filter-layer {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(0, 0, 0, 0.8);
     z-index: -1;
+    position: absolute;
+}
+
+.blur {
+    filter: blur(15px);
+}
+
+.hide {
+    visibility: hidden;
 }

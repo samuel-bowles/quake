@@ -8,21 +8,20 @@ menuHoverSound.volume = 0.2;
 let menuButtonSound = new Audio("assets/audio/menu2.wav");
 menuButtonSound.volume = 0.2;
 
-
-
-// Toggles Audio On and Off
+// Toggles Media
 function toggleAudio() {
         mute === "true" ? mute = "false" : mute = "true";
 
         // Set Video Mute and Volume
         let bgVid = document.querySelector('.quake-video-bg');
-        
-        // If video doesn't autoplay this will start playback
-        if (bgVid.paused === true) {
-            bgVid.play();
-        }
         bgVid.volume = 0.2;
         bgVid.muted === true ? bgVid.muted = false : bgVid.muted = true;
+}
+
+function toggleVideo() {
+    // If video doesn't autoplay this will start playback
+    let bgVid = document.querySelector('.quake-video-bg');
+    bgVid.paused === true ? bgVid.play() : bgVid.pause();
 }
 
 // Play menu audio effect
