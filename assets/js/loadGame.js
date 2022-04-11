@@ -7,12 +7,60 @@ class LoadGame {
         menuEl.innerHTML = `
             <h1><img class="load-heading heading" src="assets/sprites/trans.png" alt="load-menu"></h1>
 
-            <ul>
-                <li class="menu-item" class="quick-load">Udob</li>
-                <li class="menu-item" class="quick-load"><p>Last Waltz</p><p>Kills: 38/106</p> </li>
-                <li class="menu-item" class="regular-load">Dimension Of The Machine</li>
-                <li class="menu-item" id="regular-load"><p>Grave Machine</p><p>Kills: 0/104</p></li>
-            </ul>
+            <table>
+                <tr>
+                    <td>
+                        Quick: Terra
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Sentinal Rave
+                    </td>
+                    <td>
+                        Kils:239/260
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Terra
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Sentinal Rave
+                    </td>
+                    <td>
+                        Kills: 204/260
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Quake
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Azure Agony
+                    </td>
+                    <td>
+                        Kills: 0/54
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Honey
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Constantly No Respect
+                    </td>
+                    <td>
+                        Kills: 0/121
+                    </td>
+                </tr>
+            </table>
         `
         return menuEl
     }

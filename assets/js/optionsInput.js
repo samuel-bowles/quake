@@ -23,26 +23,29 @@ class OptionsInput {
                 </tr>
                 <tr>
                     <td>
-                        <label for="aim-assist">Aim Assist</label>
+                        <label class="triangle-cursor" for="aim-assist">Aim Assist</label>
                     </td>
-                    <td>
+                    <td >
                         <input type="checkbox" id="aim-assist" name="aim-assist" value="on">
+                        <label class="on-off" for="aim-assist"></label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label for="invert-look">Invert Look<label>
+                        <label class="triangle-cursor" for="invert-look">Invert Look<label>
                     </td>
                     <td>
                         <input type="checkbox" id="invert-look" name="invert-look" value="on">
+                        <label class="on-off" for="invert-look"></label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label for="vibration-feature">Vibration Feature</label>
+                        <label class="triangle-cursor" for="vibration-feature">Vibration Feature</label>
                     </td>
                     <td>
                         <input type="checkbox" id="vibration-feature" name="vibration-feature" value="on">
+                        <label class="on-off" for="vibration-feature"></label>
                     </td>
                 </tr>
                 <tr>
@@ -102,10 +105,11 @@ class OptionsInput {
                 </tr>
                 <tr>
                     <td>
-                        <label for="aim-smoothing">Aim Smoothing</label>
+                        <label class="triangle-cursor" for="aim-smoothing">Aim Smoothing</label>
                     </td>
                     <td>
                         <input type="checkbox" id="aim-smoothing" name="aim-smoothing" value="on">
+                        <label class="on-off" for="aim-smoothing"></label>
                     </td>
                 </tr>
                 <tr>
@@ -142,10 +146,11 @@ class OptionsInput {
                 </tr>
                 <tr>
                 <td>
-                    <label for="motion-sensor">Enabled</label>
+                    <label class="triangle-cursor" for="motion-sensor">Enabled</label>
                 </td>
                 <td>
                     <input type="checkbox" id="motion-sensor" name="motion-sensor" value="off">
+                    <label class="on-off" for="motion-sensor"></label>
                 </td>
                 </tr>
                 <tr>

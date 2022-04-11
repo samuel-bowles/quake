@@ -44,10 +44,11 @@ class OptionsDisplay {
                     </td>
                 <tr>
                     <td>
-                        <label for="texture-smoothing">Texture Smoothing</label>
+                        <label class="triangle-cursor" for="texture-smoothing">Texture Smoothing</label>
                     </td>
                     <td>
                         <input type="checkbox" id="texture-smoothing" name="texture-smoothing" value="on">
+                        <label class="on-off" for="texture-smoothing"></label>
                     </td>
                 </tr>
                 <tr>
@@ -57,82 +58,92 @@ class OptionsDisplay {
                 </tr>
                 <tr>
                     <td>
-                        <label for="resolution">Resolution</label>
+                        <label class="triangle-cursor" for="resolution">Resolution</label>
                     </td>
                     <td>
                         <input type="checkbox" id="resolution" name="resolution" value="on">
+                        <label class="on-off" for="resolution"></label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label for="antialiasing">Antialiasing</label>
+                        <label class="triangle-cursor" for="antialiasing">Antialiasing</label>
                     </td>
                     <td>
                         <input type="checkbox" id="antialiasing" name="antialiasing" value="on">
+                        <label class="on-off" for="antialiasing"></label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label for="ambient-occlusion">Ambient Occlusion</label>
+                        <label class="triangle-cursor" for="ambient-occlusion">Ambient Occlusion</label>
                     </td>
                     <td>
                         <input type="checkbox" id="ambient-occlusion" name="ambient-occlusion" value="on">
+                        <label class="on-off" for="ambient-occlusion"></label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label for="depth-of-field">Depth Of Field</label>
+                        <label class="triangle-cursor" for="depth-of-field">Depth Of Field</label>
                     </td>
                     <td>
                         <input type="checkbox" id="depth-of-field" name="depth-of-field" value="on">
+                        <label class="on-off" for="depth-of-field"></label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label for="motion-blur">Motion Blur</label>
+                        <label class="triangle-cursor" for="motion-blur">Motion Blur</label>
                     </td>
                     <td>
                         <input type="checkbox" id="motion-blur" name="motion-blur" value="on">
+                        <label class="on-off" for="motion-blur"></label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label for="model-interpolation">Model Interpolation</label>
+                        <label class="triangle-cursor" for="model-interpolation">Model Interpolation</label>
                     </td>
                     <td>
                         <input type="checkbox" id="model-interpolation" name="model-interpolation" value="on">
+                        <label class="on-off" for="model-interpolation"></label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label for="enhanced-models">Enhanced Models</label>
+                        <label class="triangle-cursor" for="enhanced-models">Enhanced Models</label>
                     </td>
                     <td>
                         <input type="checkbox" id="enhanced-models" name="enhanced-models" value="on">
+                        <label class="on-off" for="enhanced-models"></label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label for="color-lightmaps">Color Lightmaps<label>
+                        <label class="triangle-cursor" for="color-lightmaps">Color Lightmaps<label>
                     </td>
                     <td>
                         <input type="checkbox" id="color-lightmaps" name="color-lightmaps" value="on">
+                        <label class="on-off" for="color-lightmaps"></label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label for="fog">Fog</label>
+                        <label class="triangle-cursor" for="fog">Fog</label>
                     </td>
                     <td>
                         <input type="checkbox" id="fog" name="fog" value="on">
+                        <label class="on-off" for="fog"></label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label for="dynamic-shadows">Dynamic Shadows</label>
+                        <label class="triangle-cursor" for="dynamic-shadows">Dynamic Shadows</label>
                     </td>
                     <td>
                         <input type="checkbox" id="dynamic-shadows" name="dynamic-shadows" value="on">
+                        <label class="on-off" for="adynamic-shadows"></label>
                     </td>
                 </tr>
             </table>

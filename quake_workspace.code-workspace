@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\real_app"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "quake"
+	}
+}

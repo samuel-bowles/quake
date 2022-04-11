@@ -13,30 +13,48 @@ class LevelSelect {
         menuEl.innerHTML = `
             <h1><img class="single-heading heading" src="assets/sprites/trans.png" alt="level-select-menu"></h1>
             
-            <p>Level Select</p>
-            <form action="#" method="post">
-                <ul>
-                    <li>
+            <table>
+                <tr>
+                    <th>
+                        Level Select
+                    </th>
+                </tr>
+                <tr>
+                    <td>
                         <label for="episode">Episode</label>
+                    </td>
+                    <td>
                         <select name="episode" id="episode-select">
                             ${makeList(episodes)}
                         </select>
-                    </li>
-                    <li>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         <label for="map">Map</label>
+                    </td>
+                    <td>
                         <select name="map" id="map-select">
                             ${makeList(maps["quakeLevels"])}
                         </select>
-                    </li>
-                    <li>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         <label for="difficulty">Difficulty</label>
+                    </td>
+                    <td>
                         <select name="difficulty id="difficulty-select">
                             ${makeList(difficulty)}
                         </select>
-                    </li>
-                </ul>
-            </form>
-            <p>Play</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Play
+                    </td>
+                </tr>
+            </table>
         `
 
         // This changes the map list dropdown based on the selected episode
