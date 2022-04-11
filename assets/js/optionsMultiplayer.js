@@ -15,26 +15,29 @@ class OptionsMultiplayer {
                 </tr>
                 <tr>
                     <td>
-                        <label for="enable-voice-chat">Enable Voice Chat</label>
+                        <label class="triangle-cursor" for="enable-voice-chat">Enable Voice Chat</label>
                     </td>
                     <td>
                         <input type="checkbox" id="enable-voice-chat" name="enable-voice-chat" value="on">
+                        <label class="on-off" for="enable-voice-chat"></label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label for="enable-microphone">Enable Microphone</label>
+                        <label class="triangle-cursor" for="enable-microphone">Enable Microphone</label>
                     </td>
                     <td>
                         <input type="checkbox" id="enable-microphone" name="enable-microphone" value="on">
+                        <label class="on-off" for="enable-microphone"></label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label for="enable-crossplay">Enable Crossplaye</label>
+                        <label class="triangle-cursor" for="enable-crossplay">Enable Crossplaye</label>
                     </td>
                     <td>
                         <input type="checkbox" id="enable-crossplay" name="enable-crossplay" value="on">
+                        <label class="on-off" for="enable-crossplay"></label>
                     </td>
                 </tr>
                 <tr>

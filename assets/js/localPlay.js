@@ -32,10 +32,10 @@ class LocalPlay {
                     <!-- Cooperative is used here since it is the first game-mode selction on the Change Settings screen -->
                     <td class="menu-item" id="cooperative">Change Settings...</td>
                 </tr>
-                <tr>
+                <tr class="menu-special">
                     <td>Play</td>
                 </tr>
-                <tr>
+                <tr class="menu-special">
                     <td>End Game</td>
                 </tr>
             </table>

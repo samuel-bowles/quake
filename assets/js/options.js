@@ -7,7 +7,7 @@ class Options {
         menuEl.innerHTML = `
             <h1><img class="options-heading heading" src="assets/sprites/trans.png" alt="options-menu"></h1>
 
-            <ul>
+            <ul class="quake-large">
                 <li class="menu-item" id="options-input">Input</li>
                 <li class="menu-item" id="options-gameplay">Gameplay</li>
                 <li class="menu-item" id="options-multiplayer">Multiplayer</li>

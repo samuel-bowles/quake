@@ -7,8 +7,8 @@ class Multiplayer {
         menuEl.innerHTML = `
             <h1><img class="multiplayer-heading heading" src="assets/sprites/trans.png" alt="multiplayer-menu"></h1>
 
-            <ul>
-                <li id="online">Online</li>
+            <ul class="quake-large">
+                <li class="menu-item" id="online">Online</li>
                 <li class="menu-item" id="local-play">Local Play</li>
             </ul>
         `

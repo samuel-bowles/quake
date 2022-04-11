@@ -6,7 +6,7 @@ class NewGame {
 
         menuEl.innerHTML = `
             <h1><img class="single-heading heading" src="assets/sprites/trans.png" alt="new-game-menu"></h1>
-            <ul>
+            <ul class="quake-large">
                 <li>Quake</li>
                 <li>Scourge of Armagon</li>
                 <li>Dissolution of Eternity</li>

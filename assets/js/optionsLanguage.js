@@ -14,33 +14,33 @@ class OptionsLanguage {
                     </th>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="triangle-cursor" >
                         Deutsch
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="triangle-cursor" >
                         English
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="triangle-cursor" >
                         Espa&ntilde;ol
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="triangle-cursor" >
                         Francais
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="triangle-cursor" >
                         Italiano
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        Pycckuu;
+                    <td class="triangle-cursor" >
+                        Pycckuu
                     </td>
                 </tr>
             </table>

@@ -60,8 +60,8 @@
                 </div>
             </div>
             <div class="back-select-container">
-                <button id="back-button" class=" ui-button"><span>B</span> Back</button>
-                <button id="select-button" class="ui-button"><span>A</span> Select</button>
+                <button id="back-button" class="ui-button quake-small"><span>B</span> Back</button>
+                <button id="select-button" class="ui-button quake-small"><span>A</span> Select</button>
             </div>
         </div>
     </div>
@@ -116,37 +116,41 @@
             containerBox.contains('hide') ? containerBox.remove('hide') : containerBox.add('hide');
         }
 
-        // Listen Keyboard Events
-        document.addEventListener('keydown', function (event) {
-            // Esc to toggle menu display
-            if (event.key === 'Escape') {
-                menuToggle();
-                playButton();
-            }
+        // Listen for Keyboard Events
+        document.addEventListener('keyup', function(event) {
+            let key = event.key;
 
-            // B for back
-            if (event.key === 'b') {
-                if (window.location.hash === "#main-menu") {
+            switch(key) {
+                case "Escape":
                     menuToggle();
                     playButton();
-                } else {
-                    history.back();
-                    playButton();
-                }
+                    break 
+                case "b":
+                    if (window.location.hash === "#main-menu") {
+                        menuToggle();
+                        playButton();
+                    } else {
+                        history.back();
+                        playButton();
+                    }
+                    break
+                case "a":
+                    // Check to see whether need to show menu or not first
+                    if (!quakeVideoBg.contains('blur')) {
+                        quakeVideoBg.add('blur');
+                        filterLayer.remove('hide')
+                        containerBox.remove('hide')
+                    } else {
+                        history.forward();
+                        playButton();
+                    }
+                    break
+                
+                // Add code to allow keyboard navigation
+                // case "ArrowDown":
+                // case "ArrowUp"
             }
-
-            // A for select
-            if (event.key === 'a') {
-                // Check to see whether need to show menu or not first
-                if (!quakeVideoBg.contains('blur')) {
-                    quakeVideoBg.add('blur');
-                    filterLayer.remove('hide')
-                    containerBox.remove('hide')
-                } else {
-                    history.forward();
-                    playButton();
-                }
-            }
+            
         });
 
         function checkHash() {

@@ -24,18 +24,20 @@ class OptionsGameplay {
                 </tr>
                 <tr>
                     <td>
-                        <label for="always-run">Always Run</label>
+                        <label class="triangle-cursor" for="always-run">Always Run</label>
                     </td>
                     <td>
                         <input type="checkbox" id="always-run" name="always-run" value="on">
+                        <label class="on-off" for="always-run"></label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label for="view-bob">View Bob</label>
+                        <label class="triangle-cursor" for="view-bob">View Bob</label>
                     </td>
                     <td>
                         <input type="checkbox" id="view-bob" name="view-bob" value="on">
+                        <label class="on-off" for="view-bob"></label>
                     </td>
                 </tr>
                 <tr>
