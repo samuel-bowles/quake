@@ -9,7 +9,7 @@ class OptionsDisplay {
 
             <table>
                 <tr>
-                    <th>
+                    <th colspan="2">
                         Display
                     </th>
                 </tr>
@@ -52,7 +52,7 @@ class OptionsDisplay {
                     </td>
                 </tr>
                 <tr>
-                    <th>
+                    <th colspan="2">
                         Enhancements
                     </th>
                 </tr>

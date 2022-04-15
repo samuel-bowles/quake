@@ -9,7 +9,7 @@ class OptionsSound {
 
             <table>
                 <tr>
-                    <th>
+                    <th colspan="2">
                         Sound
                     </th>
                 </tr>

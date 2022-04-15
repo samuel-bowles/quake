@@ -9,7 +9,7 @@ class OptionsMultiplayer {
 
             <table>
                 <tr>
-                    <th>
+                    <th colspan="2">
                         Multiplayer
                     </th>
                 </tr>
@@ -41,7 +41,9 @@ class OptionsMultiplayer {
                     </td>
                 </tr>
                 <tr>
-                    <th>Player Configuration</th>
+                    <th colspan="2">
+                        Player Configuration
+                    </th>
                 </tr>
                 <tr>
                     <td>

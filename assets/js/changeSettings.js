@@ -47,7 +47,7 @@ class ChangeSettingsCooperative {
                     </td>
                 </tr>
                 <tr>
-                    <th>Mode Settings</th>
+                    <th colspan="2">Mode Settings</th>
                 </tr>
                 <tr>
                     <td><label for="difficulty">Difficulty</label></td>

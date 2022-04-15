@@ -18,7 +18,7 @@ class OptionsGameplay {
 
             <table>
                 <tr>
-                    <th>
+                    <th colspan="2">
                         Gameplay
                     </th>
                 </tr>
@@ -51,7 +51,7 @@ class OptionsGameplay {
                     </td>
                 </tr>
                 <tr>
-                    <th>Crosshair</th>
+                    <th colspan="2">Crosshair</th>
                 </tr>
                 <tr>
                     <td>

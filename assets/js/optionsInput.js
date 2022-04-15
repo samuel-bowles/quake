@@ -9,7 +9,7 @@ class OptionsInput {
 
             <table>
                 <tr>
-                    <th>
+                    <th colspan="2">
                         Current Player: Player 1
                     </th>
                 </tr>
@@ -19,7 +19,9 @@ class OptionsInput {
                     </td>
                 </tr>
                 <tr>
-                    <th>Controller</th>
+                    <th colspan="2">
+                        Controller
+                    </th>
                 </tr>
                 <tr>
                     <td>
@@ -113,7 +115,7 @@ class OptionsInput {
                     </td>
                 </tr>
                 <tr>
-                    <th>
+                    <th colspan="2">
                         Deadzone
                     </th>
                 </tr>
@@ -140,7 +142,7 @@ class OptionsInput {
                     </td>
                 </tr>
                 <tr>
-                    <th>
+                    <th colspan="2">
                         Motion Sensor
                     </th>
                 </tr>

@@ -48,7 +48,7 @@ class ChangeSettingsDeathmatch {
                     </td>
                 </tr>
                 <tr>
-                    <th>Mode Settings</th>
+                    <th colspan="2">Mode Settings</th>
                 </tr>
                 <tr>
                     <td>Number Of Bots</td>

@@ -15,7 +15,7 @@ class LevelSelect {
             
             <table>
                 <tr>
-                    <th>
+                    <th colspan="2">
                         Level Select
                     </th>
                 </tr>
