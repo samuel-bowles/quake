@@ -71,9 +71,11 @@
         function addOnClickHashChange(menuEl) {
             let itemList = menuEl.querySelectorAll('.menu-item')
             itemList.forEach((item) => {
-                item.onclick = (ev => {
-                  window.location.hash = item.id;
-                })
+                if (!item.classList.contains('modal-toggle')) {
+                    item.onclick = (ev => {
+                      window.location.hash = item.id;
+                    })
+                }
             })
         }
 
@@ -136,10 +138,13 @@
                     break
                 case "a":
                     // Check to see whether need to show menu or not first
+                    let popup = document.querySelector('#modal');
                     if (!quakeVideoBg.contains('blur')) {
                         quakeVideoBg.add('blur');
                         filterLayer.remove('hide')
                         containerBox.remove('hide')
+                    } else if (typeof(popup) != "undefined" && popup !=null && popup.hasAttribute('open')) {
+                        popup.close();
                     } else {
                         history.forward();
                         playButton();
@@ -150,8 +155,18 @@
                 // case "ArrowDown":
                 // case "ArrowUp"
             }
-            
         });
+
+        // Show menu on touch devices on first touch
+        function is_touch_enabled() {
+            return ( 'ontouchstart' in window ) ||
+                   ( navigator.maxTouchPoints > 0 ) ||
+                   ( navigator.msMaxTouchPoints > 0 );
+        }
+
+        if (is_touch_enabled()) {
+            menuToggle();
+        }            
 
         function checkHash() {
             let menuScreen = document.querySelector('.menu-screen');

@@ -387,3 +387,34 @@ tr:hover {
     cursor: pointer;
     color: white;
 }
+
+
+/* Modal popup on main menu */
+.modal {
+    color: white;
+    background: rgb(60, 60, 60);
+    border: none;
+    min-width: 20%;
+}
+
+.modal .close-button {
+    padding: 5px 40px;
+    border: 2px solid rgb(56, 197, 185);
+    font-size: 0.8rem;
+    color: rgb(56, 197, 185);
+    background: rgba(56, 197, 185, 0.2);
+
+}
+
+.modal .close-button span {
+    color: rgb(56, 197, 185);
+}
+
+.modal::backdrop {
+    background: none;
+}
+
+/* Don't show quake spinning logo for this menu item */
+#cooperative:hover:before {
+    background: none;
+}
