@@ -9,7 +9,7 @@ class OptionsLanguage {
 
             <table>
                 <tr>
-                    <th>
+                    <th colspan="2">
                         Language
                     </th>
                 </tr>
